@@ -10,18 +10,18 @@ function updateTime() {
   losangelesTimeElement.innerHTML = losangelesTime.format(
     "hh:mm:ss [<small>]A[</small>]"
   );
-}
 
-let parisElement = document.querySelector("#paris");
-if (parisElement) {
-  let parisDateElement = parisElement.querySelector(".date");
-  let parisTimeElement = parisElement.querySelector(".time");
-  let parisTime = moment().tz("Europe/Paris");
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("Europe/Paris");
 
-  parisDateElement.innerHTML = moment().format("MMMM Do YYYY");
-  parisTimeElement.innerHTML = parisTime.format(
-    "hh:mm:ss [<small>]A[</small>]"
-  );
+    parisDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    parisTimeElement.innerHTML = parisTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
